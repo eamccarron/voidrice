@@ -1,0 +1,17 @@
+#!/bin/sh
+
+declare -A links
+
+links["/usr/share/zsh/site-functions/_lsd"]="$XDG_DATA_HOME"/zsh/site-functions/_lsd
+links["/bin/lsd"]="$SRC_DIR"/lsd/target/release/lsd
+links["$HOME/.zprofile"]="$XDG_CONFIG_HOME"/shell/profile
+links["$HOME/.xprofile"]="$XDG_CONFIG_HOME"/x11/xprofile
+links["$HOME/.vimrc"]="$XDG_CONFIG_HOME"/nvim/init.vim
+#SSH and gnupg both use pki.  This is also allows for easier management and encryption of all of your private keys
+links["$HOME/.ssh"]="$HOME"/.pki/ssh
+links["$HOME/.gnupg"]="$HOME"/.pki/gnupg
+
+for link in "${!links[@]}"; do
+	[[ -h $link ]] && sudo rm $link
+	sudo ln -s ${links["$link"]} "$link"
+done

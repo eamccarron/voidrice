@@ -1,4 +1,4 @@
-let mapleader =","
+let mapleader = ","
 
 if ! filereadable(system('echo -n "${XDG_CONFIG_HOME:-$HOME/.config}/nvim/autoload/plug.vim"'))
 	echo "Downloading junegunn/vim-plug to manage plugins..."
@@ -47,7 +47,7 @@ set noshowcmd
 	map <leader>f :Goyo \| set bg=light \| set linebreak<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 	map <leader>o :setlocal spell! spelllang=en_us<CR>
-" Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
+" Splits open at the bottom and right, which isn't stuipid, unlike vim defaults.
 	set splitbelow splitright
 
 " Nerd tree
@@ -60,17 +60,21 @@ set noshowcmd
     endif
 
 " vimling:
-	nm <leader><leader>d :call ToggleDeadKeys()<CR>
-	imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
-	nm <leader><leader>i :call ToggleIPA()<CR>
-	imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
-	nm <leader><leader>q :call ToggleProse()<CR>
+	" nm <leader><leader>d :call ToggleDeadKeys()<CR>
+	" imap <leader><leader>d <esc>:call ToggleDeadKeys()<CR>a
+	" nm <leader><leader>i :call ToggleIPA()<CR>
+	" imap <leader><leader>i <esc>:call ToggleIPA()<CR>a
+	" nm <leader><leader>q :call ToggleProse()<CR>
 
 " Shortcutting split navigation, saving a keypress:
 	map <C-h> <C-w>h
 	map <C-j> <C-w>j
 	map <C-k> <C-w>k
 	map <C-l> <C-w>l
+
+" Use vim navigation keys for tab navigation:
+	map <C-H> gt
+	map <C-L> gT
 
 " Replace ex mode with gq
 	map Q gq
@@ -79,23 +83,23 @@ set noshowcmd
 	map <leader>s :!clear && shellcheck -x %<CR>
 
 " Open my bibliography file in split
-	map <leader>b :vsp<space>$BIB<CR>
-	map <leader>r :vsp<space>$REFER<CR>
+	"map <leader>b :vsp<space>$BIB<CR>
+	"map <leader>r :vsp<space>$REFER<CR>
 
 " Replace all is aliased to S.
 	nnoremap S :%s//g<Left><Left>
 
 " Compile document, be it groff/LaTeX/markdown/etc.
-	map <leader>c :w! \| !compiler "<c-r>%"<CR>
+	" map <leader>c :w! \| !compiler "<c-r>%"<CR>
 
 " Open corresponding .pdf/.html or preview
 	map <leader>p :!opout <c-r>%<CR><CR>
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
-	autocmd VimLeave *.tex !texclear %
+	" autocmd VimLeave *.tex !texclear %
 
 " Ensure files are read as what I want:
-	let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
+	" let g:vimwiki_ext2syntax = {'.Rmd': 'markdown', '.rmd': 'markdown','.md': 'markdown', '.markdown': 'markdown', '.mdown': 'markdown'}
 	map <leader>v :VimwikiIndex
 	let g:vimwiki_list = [{'path': '~/vimwiki', 'syntax': 'markdown', 'ext': '.md'}]
 	autocmd BufRead,BufNewFile /tmp/calcurse*,~/.calcurse/notes/* set filetype=markdown
@@ -123,7 +127,8 @@ set noshowcmd
 	autocmd BufWritePost Xresources,Xdefaults,xresources,xdefaults !xrdb %
 " Recompile dwmblocks on config edit.
 	autocmd BufWritePost ~/.local/src/dwmblocks/config.h !cd ~/.local/src/dwmblocks/; sudo make install && { killall -q dwmblocks;setsid -f dwmblocks }
-
+" Recompile lsd when icons updated
+	autocmd BufWritePost ~/.local/src/lsd/src/icon.rs !cd ~/.local/src/lsd/; cargo build
 " Turns off highlighting on the bits of code that are changed, so the line that is changed is highlighted but the actual text that has changed stands out on the line and is readable.
 if &diff
     highlight! link DiffText MatchParen
@@ -146,4 +151,4 @@ function! ToggleHiddenAll()
         set showcmd
     endif
 endfunction
-nnoremap <leader>h :call ToggleHiddenAll()<CR>
+nnoremap <leader>H :call ToggleHiddenAll()<CR>
