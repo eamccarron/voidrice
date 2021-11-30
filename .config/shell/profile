@@ -64,7 +64,6 @@ export MOZ_USE_XINPUT2="1"		# Mozilla smooth scrolling/touchpads.
 export AWT_TOOLKIT="MToolkit wmname LG3D"	#May have to install wmname
 export _JAVA_AWT_WM_NONREPARENTING=1	# Fix for Java applications in dwm
 
-export COINBASE_API_KEY="7b76ec75-6a8b-4db8-9b64-a0aa575d3757"
 
 # These are the lists for lf icons:
 # source "${XDG_CONFIG_HOME:-$HOME/.config}/lf/lf-icons-larbs"
