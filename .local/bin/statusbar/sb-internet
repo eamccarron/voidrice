@@ -1,0 +1,33 @@
+#!/bin/sh
+
+# Show wifi  and percent strength or  if none.
+# Show  if connected to ethernet or  if none.
+# Show  if a vpn connection is active
+
+ETH_UP_ICON=
+ETH_DOWN_ICON=
+VPN_ICON=
+WIFI_DISABLED_ICON=睊
+WIFI_UP_ICON=
+WIFI_NO_CONNECTION_ICON="! "
+
+case $BLOCK_BUTTON in
+	1) "$TERMINAL" -e nmtui; pkill -RTMIN+4 dwmblocks ;;
+	3) notify-send "  Internet module" "\- Click to connect
+$WIFI_DISABLED_ICON: wifi disabled
+$WIFI_NO_CONNECTION_ICON: no wifi connection
+$WIFI_UP_ICON: wifi connection with quality
+$ETH_DOWN_ICON: no ethernet
+$ETH_UP_ICON: ethernet working
+$VPN_ICON: vpn is active
+" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+if grep -xq 'up' /sys/class/net/w*/operstate 2>/dev/null ; then
+	wifiicon="$(awk '/^\s*w/ { print "$WIFI_UP_ICON", int($3 * 100 / 70) "% " }' /proc/net/wireless)"
+elif grep -xq 'down' /sys/class/net/w*/operstate 2>/dev/null ; then
+	grep -xq '0x1003' /sys/class/net/w*/flags && wifiicon="$WIFI_NO_CONNECTION_ICON" || wifiicon="WIFI_DISABLED_ICON "
+fi
+
+printf "%s%s%s\n" "$wifiicon" "$(sed "s/down/$ETH_DOWN_ICON /;s/up/$ETH_UP_ICON /" /sys/class/net/e*/operstate 2>/dev/null)" "$(sed "s/.*/$VPN_ICON/" /sys/class/net/tun*/operstate 2>/dev/null)"

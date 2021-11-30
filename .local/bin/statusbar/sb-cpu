@@ -1,0 +1,52 @@
+#!/bin/sh
+
+case $BLOCK_BUTTON in
+	1) notify-send "🖥 CPU hogs" "$(ps axch -o cmd:15,%cpu --sort=-%cpu | head)\\n(100% per core)" ;;
+	2) setsid -f "$TERMINAL" -e htop ;;
+	3) notify-send "🖥 CPU module " "\- Shows CPU temperature.
+- Click to show intensive processes.
+- Middle click to open htop." ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+MAX_TEMP=95
+
+read icon temp scale <<< $( sensors | awk '/CPU:/ {
+	split($0,a);
+	temp=a[2]
+	scale=a[2]/95
+	if( scale <= .2 ){
+		printf "%s %s %d", "", temp, scale*10;
+	}
+	else if( scale <= .4 ){
+		printf "%s %s %d", "", temp, scale*10;
+	}
+	else if( scale <= .6 ){
+		printf "%s %s %d", "", temp, scale*10;
+	}
+	else if( scale <= .8 ){
+		printf "%s %s %d", "", temp, scale*10;
+	}
+	else {
+		printf "%s %s %d", "", temp, scale*10;
+	}
+}')
+
+GREEN='\e[0;32m'
+YELLOW='\e[1;33m'
+ORANGE='\e[0;33m'
+RED='\e[0;31m'
+NC='\e[0;m'
+
+if [[ scale -le 4 ]]; then
+    color=$GREEN
+elif [[ scale -le 6 ]]; then
+    color=$YELLOW
+elif [[ scale -le 8 ]]; then
+    color=$ORANGE
+else
+    color=$RED
+fi
+
+# echo -e "${color} $icon $temp ${NC}"
+echo "$icon $temp"

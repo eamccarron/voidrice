@@ -9,6 +9,9 @@ set icons true
 set period 1
 set hiddenfiles ".*:*.aux:*.log:*.bbl:*.bcf:*.blg:*.run.xml"
 
+# Set hidden off by default (there's a lot of important stuff in dotfiles!)
+set hidden!
+
 # Vars that depend on environmental variables
 $lf -remote "send $id set previewer ${XDG_CONFIG_HOME:-$HOME/.config}/lf/scope"
 

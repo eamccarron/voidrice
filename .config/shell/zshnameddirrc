@@ -22,6 +22,7 @@ hash -d cfx=/home/hecate/.config/x11/xresources
 hash -d cfxp=/home/hecate/.config/x11/xprofile 
 hash -d cfxi=/home/hecate/.config/x11/xinitrc 
 hash -d cfi=/home/hecate/.local/src/lsd/src/icon.rs 
+hash -d cfk=/home/hecate/.config/kitty/kitty.conf 
 hash -d cfv=/home/hecate/.config/nvim/init.vim 
 hash -d cfz=/home/hecate/.config/zsh/.zshrc 
 hash -d cfa=/home/hecate/.config/shell/aliasrc 

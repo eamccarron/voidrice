@@ -6,6 +6,11 @@
 .fonts
 .gamesaves
 .gnupg
+.local/share/cargo/registry
+.local/share/go
+.local/share/nvim/swap
+.local/lib
+.local/include
 .npm
 .nv
 .pki

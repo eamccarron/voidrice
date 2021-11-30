@@ -1,2 +1,3 @@
-#symlink-arrow: 
-symlink-arrow: ->
+symlink-arrow: 
+icons:
+  separator: "  "

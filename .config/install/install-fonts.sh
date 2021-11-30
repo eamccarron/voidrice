@@ -20,8 +20,6 @@ mkdir patchedFantasqueSansMono
 	unzip FantasqueSansMono.zip
 	rm ./*Windows*
 
-	# Want the monospace fonts only
-	rm ./*Complete.ttf
 )
 
 mkdir -p ~/.fonts

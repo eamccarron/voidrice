@@ -1,0 +1,39 @@
+#!/bin/sh
+
+usage(){
+	echo "$usage \n"
+}
+
+help="replace: replaces a string of text in all files specified"
+usage="rp [-rb] string replacement [files...]"
+opts=bhr
+longopts=backup,help,recursive
+parsed=$(getopt --options=$opts --longoptions=$longopts --name "$0" -- "$@")
+
+unset opts
+eval set -- "$parsed"
+
+while [[ "$1" =~ ^- && ! "$1" == "--" ]]; do case $1 in
+	-h | --help )
+		echo "$help \n $usage"
+		exit
+		;;
+	-r | --recursive )
+		shift; recurse=true
+		opts="$opts r"
+		;;
+	-b | --backup )
+		shift; backup=true
+		opts="$opts b"
+		;;
+	*)
+		usage
+		;;
+	esac
+done
+
+for file in $@; do
+	# Recurse on directories preserving options if recurse specified
+	[ -d file ] && [ "$recurse" = true ] && $0 $opts file
+
+	[ "$backup" = true ] && [

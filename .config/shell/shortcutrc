@@ -23,6 +23,7 @@ cfx="$EDITOR /home/hecate/.config/x11/xresources" \
 cfxp="$EDITOR /home/hecate/.config/x11/xprofile" \
 cfxi="$EDITOR /home/hecate/.config/x11/xinitrc" \
 cfi="$EDITOR /home/hecate/.local/src/lsd/src/icon.rs" \
+cfk="$EDITOR /home/hecate/.config/kitty/kitty.conf" \
 cfv="$EDITOR /home/hecate/.config/nvim/init.vim" \
 cfz="$EDITOR /home/hecate/.config/zsh/.zshrc" \
 cfa="$EDITOR /home/hecate/.config/shell/aliasrc" \

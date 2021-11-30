@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xbel version="1.0"
+      xmlns:bookmark="http://www.freedesktop.org/standards/desktop-bookmarks"
+      xmlns:mime="http://www.freedesktop.org/standards/shared-mime-info"
+>
+  <bookmark href="file:///mnt/virt/images/kali-linux-2021.3-virtualbox-amd64.ova" added="2021-11-02T19:38:45.053248Z" modified="2021-11-02T19:38:45.053250Z" visited="2021-11-02T19:38:45.053248Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-virtualbox-ova"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-02T19:38:45.053249Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/cerberus/Lares-MoV-Training/MoVFiles.zip" added="2021-11-03T16:47:32.767443Z" modified="2021-11-03T16:47:32.767448Z" visited="2021-11-03T16:47:32.767444Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-03T16:47:32.767445Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///mnt/virt/vbox/New%20group/Win10-ws-1/win-ws-1.vmdk" added="2021-11-04T03:13:41.361499Z" modified="2021-11-04T03:13:41.361504Z" visited="2021-11-04T03:13:41.361500Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-virtualbox-vmdk"/>
+        <bookmark:applications>
+          <bookmark:application name="virt-manager" exec="&apos;virt-manager %u&apos;" modified="2021-11-04T03:13:41.361501Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/cerberus/Lares-MoV-Training/Time%20Trigger%20Example%20(Scripting)%20-%20Win32%20apps%20_%20Microsoft%20Docs.html" added="2021-11-04T16:09:49.026809Z" modified="2021-11-04T16:09:49.026813Z" visited="2021-11-04T16:09:49.026810Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="text/html"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-04T16:09:49.026811Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///mnt/virt/images/gparted-live-1.3.1-1-amd64.iso" added="2021-11-05T16:43:14.179324Z" modified="2021-11-05T16:43:14.179327Z" visited="2021-11-05T16:43:14.179325Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-cd-image"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-05T16:43:14.179326Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///" added="2021-11-06T01:44:36.928377Z" modified="2021-11-06T01:44:36.928381Z" visited="2021-11-06T01:44:36.928377Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="inode/directory"/>
+        <bookmark:applications>
+          <bookmark:application name="Disk Usage Analyzer" exec="&apos;mate-disk-usage-analyzer %u&apos;" modified="2021-11-06T01:44:36.928379Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/cerberus/Lares-MoV-Training/splunk-8.2.3-cd0848707637-x64-release.msi" added="2021-11-08T19:57:02.819164Z" modified="2021-11-08T19:57:02.819167Z" visited="2021-11-08T19:57:02.819165Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-msi"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-08T19:57:02.819166Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/cerberus/Lares-MoV-Training/Firefox%20Setup%2094.0.1.exe" added="2021-11-08T20:04:32.796395Z" modified="2021-11-08T20:04:32.796398Z" visited="2021-11-08T20:04:32.796395Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-ms-dos-executable"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-08T20:04:32.796396Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/cerberus/Downloads/Unigine_Superposition-1.1.run" added="2021-11-09T23:01:43.496504Z" modified="2021-11-09T23:01:43.496507Z" visited="2021-11-09T23:01:43.496504Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-09T23:01:43.496505Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/cerberus/Downloads/Unigine_Valley-1.0.run" added="2021-11-10T00:39:08.503335Z" modified="2021-11-10T00:39:08.503339Z" visited="2021-11-10T00:39:08.503336Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/octet-stream"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-10T00:39:08.503337Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/.pki/ssh/id_aws-cf_ed_25519.pub" added="2021-11-10T18:19:16.973231Z" modified="2021-11-10T18:19:16.973235Z" visited="2021-11-10T18:19:16.973231Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-publisher"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-10T18:19:16.973233Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/.pki/ssh/id_aws-cf_rsa.pub" added="2021-11-10T21:21:28.895655Z" modified="2021-11-10T21:21:28.895658Z" visited="2021-11-10T21:21:28.895656Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/vnd.ms-publisher"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-10T21:21:28.895656Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/pic-selected-211111-1738-51.png" added="2021-11-11T21:39:06.082307Z" modified="2021-11-11T21:39:06.082310Z" visited="2021-11-11T21:39:06.082308Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/png"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-11T21:39:06.082308Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/.local/share/.bg/Solarized-bg-1.jpeg" added="2021-11-13T07:30:39.225833Z" modified="2021-11-13T07:30:39.225837Z" visited="2021-11-13T07:30:39.225834Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-13T07:30:39.225835Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/.local/share/.bg/Solarized-bg-2.jpeg" added="2021-11-13T07:31:38.038340Z" modified="2021-11-13T07:31:38.038345Z" visited="2021-11-13T07:31:38.038341Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-13T07:31:38.038343Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/.local/share/.bg/solarized-bg-1.jpg" added="2021-11-13T07:33:28.698662Z" modified="2021-11-13T07:36:31.536072Z" visited="2021-11-13T07:33:28.698663Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-13T07:36:31.536070Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/.local/share/.bg/solarized-bg-2.jpg" added="2021-11-13T07:34:03.701791Z" modified="2021-11-13T07:36:08.574257Z" visited="2021-11-13T07:34:03.701792Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="image/jpeg"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-13T07:36:08.574253Z" count="3"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///mnt/virt/isos/VBoxGuestAdditions_6.1.28.iso" added="2021-11-15T20:08:43.506534Z" modified="2021-11-15T20:08:43.506539Z" visited="2021-11-15T20:08:43.506534Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/x-cd-image"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-15T20:08:43.506536Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+  <bookmark href="file:///home/hecate/Lares-MoV-Training/MoVChallenge.zip" added="2021-11-25T01:11:50.635296Z" modified="2021-11-25T01:11:50.635299Z" visited="2021-11-25T01:11:50.635297Z">
+    <info>
+      <metadata owner="http://freedesktop.org">
+        <mime:mime-type type="application/zip"/>
+        <bookmark:applications>
+          <bookmark:application name="brave" exec="&apos;brave %u&apos;" modified="2021-11-25T01:11:50.635298Z" count="1"/>
+        </bookmark:applications>
+      </metadata>
+    </info>
+  </bookmark>
+</xbel>

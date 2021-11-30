@@ -1,0 +1,109 @@
+#!/bin/sh
+
+# Module showing CPU load as a changing bars.
+# Just like in polybar.
+# Each bar represents amount of load on one core since
+# last run.
+
+# Cache in tmpfs to improve speed and reduce SSD load
+cache=/tmp/cpubarscache
+ICON=""
+
+case $BLOCK_BUTTON in
+	2) setsid -f "$TERMINAL" -e htop ;;
+	3) notify-send "$(awk -v icon=$ICON '/cpu MHz/ {split($0,a,":"); printf "%s:%d MHz\n", icon, a[2]}' /proc/cpuinfo)" ;;
+	6) "$TERMINAL" -e "$EDITOR" "$0" ;;
+esac
+
+#CPU Usage:
+
+#CPU Load:
+# id total idle
+# stats=$(awk '/cpu[0-9]+/ {printf "%d %d %d\n", substr($1,4), ($2 + $3 + $4 + $5), $5 }' /proc/stat)
+# [ ! -f $cache ] && echo "$stats" > "$cache"
+# old=$(cat "$cache")
+# printf "🪨"
+# echo "$stats" | while read -r row; do
+# 	id=${row%% *}
+# 	rest=${row#* }
+# 	total=${rest%% *}
+# 	idle=${rest##* }
+
+# 	case "$(echo "$old" | awk '{if ($1 == id)
+# 		printf "%d\n", (1 - (idle - $3)  / (total - $2))*100 /12.5}' \
+# 		id="$id" total="$total" idle="$idle")" in
+
+# 		"0") printf "▁";;
+# 		"1") printf "▂";;
+# 		"2") printf "▃";;
+# 		"3") printf "▄";;
+# 		"4") printf "▅";;
+# 		"5") printf "▆";;
+# 		"6") printf "▇";;
+# 		"7") printf "█";;
+# 		"8") printf "█";;
+# 	esac
+# done; printf "\\n"
+# echo "$stats" > "$cache"
+
+
+#CPU Clock Speed:
+
+# TODO: Read these from lscpu and /proc/cpuiunfo
+MAX_CLOCK=4426
+MIN_CLOCK=2200
+N_BAR_SIZES=8
+stats=$(awk '/cpu MHz/ {split($0,a,":"); print a[2]}' /proc/cpuinfo)
+
+printf "$ICON "
+echo $(awk \
+	-v stats="$stats" \
+	-v max="$MAX_CLOCK" \
+	-v min="$MIN_CLOCK" \
+	-v nBarSize="$N_BAR_SIZES" \
+	'BEGIN {
+		scale = 1 / nBarSize
+		split(stats,a_stats)
+		for (clock in a_stats) {
+			ratio=(a_stats[clock] - min)/(max - min)
+			for(i = 1; i <= nBarSize; i++){
+				if(ratio > i*scale){
+					continue
+				}
+				switch (i){
+					case "1":
+						printf "▁";
+						i = nBarSize+1;
+						break;
+					case "2":
+						printf "▂";
+						i = nBarSize+1;
+						break;
+					case "3":
+						printf "▃";
+						i = nBarSize+1;
+						break;
+					case "4":
+						printf "▄";
+						i = nBarSize+1;
+						break;
+					case "5":
+						printf "▅";
+						i = nBarSize+1;
+						break;
+					case "6":
+						printf "▆";
+						i = nBarSize+1;
+						break;
+					case "7":
+						printf "▇";
+						i = nBarSize+1;
+						break;
+					case "8":
+						printf "█";
+						break;
+				}
+			}
+		}
+	}
+')

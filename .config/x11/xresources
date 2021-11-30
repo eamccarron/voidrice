@@ -1,8 +1,37 @@
-!! Transparency (0-1):
-*.alpha: 0.8
+!! Use this file for global scheme configuration
+!! Programs are configured to automatically read resources starting with Scheme allowing easy palette swaps
 
-!! Set a default font and font size as below:
-*.font: FantasqueSansMonoNerdFontMono:size=14
+
+
+!! Transparency (0-1):
+*Scheme.font: "Hurmit Nerd Font:style=medium:size=14"
+*Scheme.terminal.alpha: 0.9
+*Scheme.terminal.font:
+
+*Scheme.background:              #002b36
+*Scheme.foreground:              #839496
+*Scheme.cursor:                  #93a1a1
+
+*Scheme.selection_background:    #81908f
+*Scheme.selection_foreground:    #002831
+
+*Scheme.color0:                  #073642
+*Scheme.color1:                  #dc322f
+*Scheme.color2:                  #859900
+*Scheme.color3:                  #b58900
+*Scheme.color4:                  #268bd2
+*Scheme.color5:                  #d33682
+*Scheme.color6:                  #2aa198
+*Scheme.color7:                  #eee8d5
+*Scheme.color9:                  #cb4b16
+*Scheme.color8:                  #002b36
+
+*Scheme.color10:                 #586e75
+*Scheme.color11:                 #657b83
+*Scheme.color12:                 #839496
+*Scheme.color13:                 #6c71c4
+*Scheme.color14:                 #93a1a1
+*Scheme.color15:                 #fdf6e3
 
 /* name		dark	light */
 /* black	0	8 */
@@ -14,67 +43,67 @@
 /* cyan		6	14 */
 /* white	7	15 */
 
-/* !! gruvbox: */
-/* *.color0: #1d2021 */
-/* *.color1: #cc241d */
-/* *.color2: #98971a */
-/* *.color3: #d79921 */
-/* *.color4: #458588 */
-/* *.color5: #b16286 */
-/* *.color6: #689d6a */
-/* *.color7: #a89984 */
-/* *.color8: #928374 */
-/* *.color9: #fb4934 */
-/* *.color10: #b8bb26 */
-/* *.color11: #fabd2f */
-/* *.color12: #83a598 */
-/* *.color13: #d3869b */
-/* *.color14: #8ec07c */
-/* *.color15: #ebdbb2 */
-/* *.color256: #1d2021 */
-/* *.color257: #ebdbb2 */
+!! gruvbox:
+gruvbox.color0: #1d2021
+gruvbox.color1: #cc241d
+gruvbox.color2: #98971a
+gruvbox.color3: #d79921
+gruvbox.color4: #458588
+gruvbox.color5: #b16286
+gruvbox.color6: #689d6a
+gruvbox.color7: #a89984
+gruvbox.color8: #928374
+gruvbox.color9: #fb4934
+gruvbox.color10: #b8bb26
+gruvbox.color11: #fabd2f
+gruvbox.color12: #83a598
+gruvbox.color13: #d3869b
+gruvbox.color14: #8ec07c
+gruvbox.color15: #ebdbb2
+gruvbox.color256: #1d2021
+gruvbox.color257: #ebdbb2
 
 /* !! gruvbox light: */
-/* *.color0: #fbf1c7 */
-/* *.color1: #cc241d */
-/* *.color2: #98971a */
-/* *.color3: #d79921 */
-/* *.color4: #458588 */
-/* *.color5: #b16286 */
-/* *.color6: #689d6a */
-/* *.color7: #7c6f64 */
-/* *.color8: #928374 */
-/* *.color9: #9d0006 */
-/* *.color10: #79740e */
-/* *.color11: #b57614 */
-/* *.color12: #076678 */
-/* *.color13: #8f3f71 */
-/* *.color14: #427b58 */
-/* *.color15: #3c3836 */
-/* *.background: #fbf1c7 */
-/* *.foreground: #282828 */
-/* st.alpha: 0.9 */
+gruvbox_l.color0: #fbf1c7
+gruvbox_l.color1: #cc241d
+gruvbox_l.color2: #98971a
+gruvbox_l.color3: #d79921
+gruvbox_l.color4: #458588
+gruvbox_l.color5: #b16286
+gruvbox_l.color6: #689d6a
+gruvbox_l.color7: #7c6f64
+gruvbox_l.color8: #928374
+gruvbox_l.color9: #9d0006
+gruvbox_l.color10: #79740e
+gruvbox_l.color11: #b57614
+gruvbox_l.color12: #076678
+gruvbox_l.color13: #8f3f71
+gruvbox_l.color14: #427b58
+gruvbox_l.color15: #3c3836
+gruvbox_l.background: #fbf1c7
+gruvbox_l.foreground: #282828
+
 
 /* !! brogrammer: */
-/* *.foreground:  #d6dbe5 */
-/* *.background:  #131313 */
-/* *.color0:      #1f1f1f */
-/* *.color8:      #d6dbe5 */
-/* *.color1:      #f81118 */
-/* *.color9:      #de352e */
-/* *.color2:      #2dc55e */
-/* *.color10:     #1dd361 */
-/* *.color3:      #ecba0f */
-/* *.color11:     #f3bd09 */
-/* *.color4:      #2a84d2 */
-/* *.color12:     #1081d6 */
-/* *.color5:      #4e5ab7 */
-/* *.color13:     #5350b9 */
-/* *.color6:      #1081d6 */
-/* *.color14:     #0f7ddb */
-/* *.color7:      #d6dbe5 */
-/* *.color15:     #ffffff */
-/* *.colorBD:     #d6dbe5 */
+brogrammer.foreground:  #d6dbe5
+brogrammer.background:  #131313
+brogrammer.color0:      #1f1f1f
+brogrammer.color8:      #d6dbe5
+brogrammer.color1:      #f81118
+brogrammer.color9:      #de352e
+brogrammer.color2:      #2dc55e
+brogrammer.color10:     #1dd361
+brogrammer.color3:      #ecba0f
+brogrammer.color11:     #f3bd09
+brogrammer.color4:      #2a84d2
+brogrammer.color12:     #1081d6
+brogrammer.color5:      #4e5ab7
+brogrammer.color13:     #5350b9
+brogrammer.color6:      #1081d6
+brogrammer.color14:     #0f7ddb
+brogrammer.color7:      #d6dbe5
+brogrammer.color15:     #ffffff
+brogrammer.colorBD:     #d6dbe5
 
 /* ! base16 */
 /* *.color0:       #181818 */
@@ -94,48 +123,23 @@
 /* *.color14:      #86c1b9 */
 /* *.color15:      #f8f8f8 */
 
-/* !! beleyenv solarized */
-*.background:              #002b36
-*.foreground:              #839496
-*.cursor:                  #93a1a1
 
-*.selection_background:    #81908f
-*.selection_foreground:    #002831
-
-*.color0:                  #073642
-*.color1:                  #dc322f
-*.color2:                  #859900
-*.color3:                  #b58900
-*.color4:                  #268bd2
-*.color5:                  #d33682
-*.color6:                  #2aa198
-*.color7:                  #eee8d5
-*.color9:                  #cb4b16
-*.color8:                  #002b36
-*.color10:                 #586e75
-*.color11:                 #657b83
-*.color12:                 #839496
-*.color13:                 #6c71c4
-*.color14:                 #93a1a1
-*.color15:                 #fdf6e3
-
-!! solarized
-/* *.color0:	#073642 */
-/* *.color1:	#dc322f */
-/* *.color2:	#859900 */
-/* *.color3:	#b58900 */
-/* *.color4:	#268bd2 */
-/* *.color5:	#d33682 */
-/* *.color6:	#2aa198 */
-/* *.color7:	#eee8d5 */
-/* *.color9:	#cb4b16 */
-/* *.color8:	#fdf6e3 */
-/* *.color10:	#586e75 */
-/* *.color11:	#657b83 */
-/* *.color12:	#839496 */
-/* *.color13:	#6c71c4 */
-/* *.color14:	#93a1a1 */
-/* *.color15:	#fdf6e3 */
+/* $base03:    #002b36; */
+/* $base02:    #073642; */
+/* $base01:    #586e75; */
+/* $base00:    #657b83; */
+/* $base0:     #839496; */
+/* $base1:     #93a1a1; */
+/* $base2:     #eee8d5; */
+/* $base3:     #fdf6e3; */
+/* $yellow:    #b58900; */
+/* $orange:    #cb4b16; */
+/* $red:       #dc322f; */
+/* $magenta:   #d33682; */
+/* $violet:    #6c71c4; */
+/* $blue:      #268bd2; */
+/* $cyan:      #2aa198; */
+/* $green:     #859900; */
 
 /* !! xterm */
 /* *.color0:   #000000 */

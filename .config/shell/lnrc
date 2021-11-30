@@ -10,6 +10,7 @@ links["$HOME/.vimrc"]="$XDG_CONFIG_HOME"/nvim/init.vim
 #SSH and gnupg both use pki.  This is also allows for easier management and encryption of all of your private keys
 links["$HOME/.ssh"]="$HOME"/.pki/ssh
 links["$HOME/.gnupg"]="$HOME"/.pki/gnupg
+links["/usr/share/fonts/nerd"]="$HOME"/.fonts
 
 for link in "${!links[@]}"; do
 	[[ -h $link ]] && sudo rm $link
